@@ -1,6 +1,7 @@
 window.onload = async function() {
     // await getRepoFile()
     // menuButtonEvent();
+    console.log(await getFolder())
 };
 
 //menubutton click event 
@@ -28,4 +29,10 @@ async function getRepoFile(){
         document.querySelector(".test").innerHTML = data
     });
 }
+
+async function getFolder(){
+    return await $.get("./assets")
+}
+
+
 
